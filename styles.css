@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(246, 209, 214); 
+}
+h1 {
+    color: rgb(4, 108, 4); 
+    font-size: 4rem; 
+    font-family: 'Young Serif', sans-serif;
+}
+#clear {
+    background-color: rgb(4, 108, 4); 
+    border-radius: 5%;
+    height: 40px; 
+    width: 80px;  
+    border: none; 
+    color: white; 
+    font-family: 'Roboto Mono', monospace;
+    vertical-align: baseline;
+    margin-top: 10px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 30px;
+    margin-bottom: 0px;  
+}
+.container {
+    display: flex;
+    min-height: 500px;
+    justify-content: space-between;
+    gap: 10px; 
+}
+.list {
+    background-color: rgb(246, 227, 230);
+    border-radius: 2%;
+}
+h2 {
+    color: rgb(4, 108, 4); 
+    font-size: 20px; 
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+.add {
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(4, 108, 4);
+    margin-left: 5px;  
+}
+input[type=text] {
+    border: none;
+    border-radius: 4px;
+    background-color:  rgb(243, 241, 242);
+
+}
+.element {
+    display: flex; 
+}
+li {
+    list-style-type: none;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(3, 55, 3);
+    font-size: 15px; 
+    padding: 5px; 
+}
+
+input[type=checkbox]:checked + li {
+    text-decoration: line-through;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(4, 108, 4);
+}

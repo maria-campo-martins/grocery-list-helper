@@ -1,0 +1,123 @@
+<%- include("partials/header.ejs") %> 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<div class="container">
+<div class="list">
+    <h2>Produce</h2>
+    <form class = "add" action="/addprod" method="POST">
+        Add an Item: <input type = "text" name = "prod">
+    </form>
+    <% if (produceList.length === 0) { %> 
+        <ul>
+        </ul>
+    <% } else { %>
+    <% produceList.forEach(function(item) { %>
+        <div class="element">
+        <input type = "checkbox"class="strikethrough">
+        <li> <%=produceList[i]%></li>
+        </div>
+<% }); } %>
+</div>
+
+<div class="list">
+<h2>Proteins</h2>
+<form  class = "add" action="/addprot" method="POST">
+    Add an Item: <input type = "text" name = "prot">
+</form>
+<% if (proteinList.length === 0) { %> 
+    <ul>
+    </ul>
+<% } else { %>
+<% proteinList.forEach(function(item) { %>
+    <div class="element">
+    <input type = "checkbox" class="strikethrough"> 
+    <li> <%=item%></li>
+    </div>
+<% }); } %>
+</div>
+
+
+<div class="list">
+<h2>Dairy</h2>
+<form  class = "add" action="/adddair" method="POST">
+    Add an Item: <input type = "text" name = "dair">
+</form>
+<% if (dairyList.length === 0) { %> 
+    <ul>
+    </ul>
+<% } else { %>
+<% dairyList.forEach(function(item) { %>
+    <div class="element"><input type = "checkbox" class="strikethrough"> <li> <%=item%></li></div>
+<% }); } %>
+</div>
+
+<div class="list">
+    <h2>Carbs</h2>
+    <form  class = "add" action="/addcarb" method="POST">
+        Add an Item: <input type = "text" name = "carb">
+    </form>
+    <% if (carbList.length === 0) { %> 
+        <ul>
+        </ul>
+    <% } else { %>
+    <% carbList.forEach(function(item) { %>
+        <div class="element"><input type = "checkbox" class="strikethrough"> <li> <%=item%></li></div>
+    <% }); } %>
+</div>
+
+<div class="list">
+    <h2>Snacks</h2>
+    <form  class = "add" action="/addsnack" method="POST">
+        Add an Item: <input type = "text" name = "snack">
+    </form>
+    <% if (snackList.length === 0) { %> 
+        <ul>
+        </ul>
+    <% } else { %>
+    <% snackList.forEach(function(item) { %>
+        <div class="element"><input type = "checkbox" class="strikethrough"> <li> <%=item%></li></div>
+<% }); } %>
+</div>
+
+<div class="list">
+    <h2>Condiments</h2>
+    <form  class = "add" action="/addcond" method="POST">
+        Add an Item: <input type = "text" name = "cond">
+    </form>
+    <% if (condsList.length === 0) { %> 
+        <ul>
+        </ul>
+    <% } else { %>
+    <% condsList.forEach(function(item) { %>
+        <div class="element"><input type = "checkbox" class="strikethrough"> <li> <%=item%></li></div>
+<% }); } %>
+</div>
+
+<div class="list">
+    <h2>Other</h2>
+    <form  class = "add" action="/addother" method="POST">
+        Add an Item: <input type = "text" name = "other">
+    </form>
+    <% if (otherList.length === 0) { %> 
+        <ul>
+        </ul>
+    <% } else { %>
+    <% otherList.forEach(function(item) { %>
+        <div class="element"><input type = "checkbox" class="strikethrough"> <li> <%=item%></li></div>
+<% }); } %>
+</div>
+</div>
+<script>
+      $(".myCheckbox").on("change", function() {
+    const checkbox = $(this);
+    const item = checkbox.siblings(".child");
+    if (checkbox.prop("checked")) {
+        item.addClass("completed-task");
+    }
+    else {
+        item.addClass("completed-task"); 
+    }
+});  
+</script>
+<%- include("partials/footer.ejs") %> 
